@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<script type="text/javascript" 
+    src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">  
+</script> 
+<html>
+    <head>
+
+        <title>ACME User</title>
+
+    </head>
+    <body>
+        
+        <form action="success_form_acme.html">
+            <div class="container">
+              <h1>ACME User Preference</h1>
+              <p>Please fill in this form and submit for account preference Confirmation</p>
+              <hr>
+              <p>
+                <label for="Fname"><b>First Name: </b></label>
+                <input type="text" placeholder="Enter Firt name" name="fname" id="fname" required>   
+              </p>
+              
+              <p>
+                <label for="Lname"><b>Last Name: </b></label>
+                <input type="text" placeholder="Enter last name" name="lname" id="lname" required>           
+                   
+              </p>
+              <p>
+                <label for="category"><b>Choose a category:</b></label>
+                  <select id="category" name="category">
+                    <option value="Grocery">Grocery</option>
+                    <option value="Electronic">Electronic</option>
+                    <option value="Furniture">Furniture</option>                    
+                </select>  
+              </p>
+            
+              <p>Select price range:</p>
+                 <div>
+                   <input type="checkbox" name="price" id="price_below50" value="Below $50" checked> <label for="price_below50">Below $50</label>
+                 </div>
+                 <div>
+                   <input type="checkbox" name="price" id="price_50to100" value="$50 - $100"> <label for="price_50to100">$50 - $100</label>
+                 </div>
+                 <div>
+                   <input type="checkbox" name="price" id="price_above100" value="above $100" checked> <label for="price_above100">Above $100</label>
+                 </div>
+              </p>
+              
+              <script>    
+                const urlParams = new URLSearchParams(window.location.search);
+                const fNameparam = urlParams.get('fName');
+                console.log(urlParams);
+                console.log(fNameparam);
+                const lNameparam = urlParams.get('lName');
+                $('#fname').val( fNameparam );
+                $('#lname').val( lNameparam );
+            </script>
+              
+              <button type="submit" class="registerbtn">Submit</button>
+            </div>           
+          </form>
+    </body>
+    <footer>
+
+    </footer>
+</html>
