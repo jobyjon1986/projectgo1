@@ -52,18 +52,16 @@
             
               <label for="pricing"><b>Choose a price:</b></label>
               <div class="form-group form-check">                
-                   <input type="checkbox" name="price" class="form-check-input" id="price_below100" value="Below $50" checked> <label for="price_below50">Below $100</label>
+                   <input type="checkbox" name="price" class="form-check-input" id="price_below100" value="Below$50" checked> <label for="price_below50">Below $100</label>
                  </div>
                  <div class="form-group form-check"> 
-                   <input type="checkbox" name="price" class="form-check-input" id="price_50to100" value="$50 - $100"> <label for="price_50to100">Above $100</label>
+                   <input type="checkbox" name="price" class="form-check-input" id="price_above100" value="Above$100"> <label for="price_50to100">Above $100</label>
                  </div>                 
               
               
               <script>    
                 const urlParams = new URLSearchParams(window.location.search);
-                const fNameparam = urlParams.get('fName');
-                console.log(urlParams);
-                console.log(fNameparam);
+                const fNameparam = urlParams.get('fName');                
                 const lNameparam = urlParams.get('lName');
                 $('#fname').val( fNameparam );
                 $('#lname').val( lNameparam );
