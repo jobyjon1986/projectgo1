@@ -29,37 +29,34 @@
       </div>
   </div>
         <form action="success_form.html" id="preferenceform">             
-              <hr>
-              <p>
+             
+          <div class="form-group">
                 <label for="Fname"><b>First Name: </b></label>
-                <input type="text" placeholder="Enter Firt name" name="fname" id="fname" required>   
-              </p>
+                <input type="text" class="form-control" placeholder="Enter Firt name" name="fname" id="fname" required>   
+          </div>
               
-              <p>
+          <div class="form-group">
                 <label for="Lname"><b>Last Name: </b></label>
-                <input type="text" placeholder="Enter last name" name="lname" id="lname" required>           
+                <input type="text" class="form-control" placeholder="Enter last name" name="lname" id="lname" required>           
                    
-              </p>
-              <p>
+          </div>
+          <div class="form-group">
                 <label for="category"><b>Choose a category:</b></label>
-                  <select id="category" name="category">
+                  <select id="category" class="form-control" name="category">
                     <option value="Grocery">Grocery</option>
                     <option value="Electronic">Electronic</option>
                     <option value="Furniture">Furniture</option>                    
                 </select>  
-              </p>
+              </div>
             
-              <p>Select price range:</p>
-                 <div>
-                   <input type="checkbox" name="price" id="price_below50" value="Below $50" checked> <label for="price_below50">Below $50</label>
+              <label for="pricing"><b>Choose a price:</b></label>
+              <div class="form-group form-check">                
+                   <input type="checkbox" name="price" class="form-check-input" id="price_below100" value="Below $50" checked> <label for="price_below50">Below $100</label>
                  </div>
-                 <div>
-                   <input type="checkbox" name="price" id="price_50to100" value="$50 - $100"> <label for="price_50to100">$50 - $100</label>
-                 </div>
-                 <div>
-                   <input type="checkbox" name="price" id="price_above100" value="above $100" checked> <label for="price_above100">Above $100</label>
-                 </div>
-              </p>
+                 <div class="form-group form-check"> 
+                   <input type="checkbox" name="price" class="form-check-input" id="price_50to100" value="$50 - $100"> <label for="price_50to100">Above $100</label>
+                 </div>                 
+              
               
               <script>    
                 const urlParams = new URLSearchParams(window.location.search);
